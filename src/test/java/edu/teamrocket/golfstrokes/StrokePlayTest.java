@@ -1,4 +1,4 @@
-package edu.asestatuas.golfstrokes;
+package edu.teamrocket.golfstrokes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
