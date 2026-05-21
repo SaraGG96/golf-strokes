@@ -10,4 +10,8 @@ public class ComputeCard {
         this.golfPlay = golfPlay;
     }
 
+    public void compute() {
+        golfPlay.scoring(scoreCard);
+    }
+
 }
