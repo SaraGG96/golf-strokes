@@ -1,4 +1,5 @@
 package edu.teamrocket;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreCard {
@@ -9,6 +10,7 @@ public class ScoreCard {
     private Player playerC;
     private Player playerD;
     private Course playersCourse;
+    private final List<Hole> holes = new ArrayList<Hole>();
 
     public void setPlayerA(Player playerA) {
         this.playerA = playerA;
@@ -55,6 +57,19 @@ public class ScoreCard {
         return playersCourse.getPlayerCourse(player);
     }
 
+    public void addHoles(Byte[] holePar) {
+        byte holeNumber = 1;
+        for (Byte par : holePar) {
+            this.holes.add(new Hole(holeNumber++, par));
+        }
+    }
 
+    public List<Hole> getHoles() {
+        return holes;
+    }
+    
+    public byte getNumHoles() {
+        return (byte) this.holes.size();
+    }
 
 }
