@@ -1,8 +1,9 @@
 package edu.teamrocket;
-
+import java.util.Arrays;
+import java.util.Map;
+import java.util.Optional;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
-import com.google.common.primitives.Bytes;
 
 public class Course {
 
@@ -10,11 +11,25 @@ public class Course {
 
     public Course() {}
 
-    public void addPlayerCourse(Player playerA, Byte[] coursePlayerA) {
-        for (byte hole = 1; hole <= coursePlayerA.length; hole++) {
-            playersCourse.put(playerA.getInitials(), hole, coursePlayerA[hole - 1]);
+    public void addPlayerCourse(Player player, Byte[] course) {
+        for (byte hole = 1; hole <= course.length; hole++) {
+            playersCourse.put(player.getInitials(), hole, course[hole - 1]);
         }
     }
 
+    public byte[] getPlayerCourse(Player player) {
+        if (player == null || !playersCourse.containsRow(player.getInitials())) {
+            return new byte[0];
+        }
+
+        Map<Byte, Byte> holeScores = playersCourse.row(player.getInitials());
+        byte[] course = new byte[holeScores.size()];
+
+        for (byte hole = 1; hole <= holeScores.size(); hole++) {
+            course[hole - 1] = holeScores.getOrDefault(hole, (byte) 0);
+        }
+
+        return course;
+    }
     
 }

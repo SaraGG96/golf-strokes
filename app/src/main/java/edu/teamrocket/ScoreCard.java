@@ -30,6 +30,31 @@ public class ScoreCard {
         this.playersCourse = course;
     }
 
+    public Player getPlayerA() {
+        return playerA;
+    }
+
+    public Player getPlayerB() {
+        return playerB;
+    }
+
+    public Player getPlayerC() {
+        return playerC;
+    }
+
+    public Player getPlayerD() {
+        return playerD;
+    }
+
+    public Course getPlayersCourse() {
+        return playersCourse;
+    }
+
+    public byte[] getPlayerCourse(Player player) {
+        if (playersCourse == null || player == null) return null;
+        return playersCourse.getPlayerCourse(player);
+    }
+
 
 
 }
