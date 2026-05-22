@@ -24,4 +24,12 @@ public class Player {
         return points;
     }
 
+    public Byte getHandicap() {
+        return handicap;
+    }
+
+    public Short getScore() {
+        return score;
+    }
+
 }
