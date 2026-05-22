@@ -60,3 +60,5 @@ public class Stableford implements GolfPlay {
 
         return StablefordSystem.DOUBLE_BOGEY.getPoints();
     }
+
+}
