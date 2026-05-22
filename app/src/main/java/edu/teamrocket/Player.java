@@ -10,6 +10,8 @@ public class Player {
     public Player(String initials, Byte handicap) {
         this.initials = initials;
         this.handicap = handicap;
+        this.score = 0;
+        this.points = 0;
     }
 
     public String getInitials() {
@@ -30,6 +32,15 @@ public class Player {
 
     public Short getScore() {
         return score;
+    }
+
+    public void setScore(Short score) {
+        this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "Initials: " + this.initials + ", Handicap: " + this.handicap + ", Score: " + this.score + ", Points: " + this.points + ")";
     }
 
 }
