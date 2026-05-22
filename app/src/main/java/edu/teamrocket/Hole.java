@@ -17,5 +17,7 @@ public class Hole {
     public Byte getPar() {
         return par;
     }
+
+
     
 }

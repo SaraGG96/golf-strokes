@@ -16,4 +16,12 @@ public class Player {
         return initials;
     }
 
+    public void setPoints(Short points) {
+        this.points = points;
+    }
+
+    public Short getPoints() {
+        return points;
+    }
+
 }

@@ -48,6 +48,15 @@ public class ScoreCard {
         return playerD;
     }
 
+    public List<Player> getPlayers() {
+        List<Player> players = new ArrayList<>();
+        if (playerA != null) players.add(playerA);
+        if (playerB != null) players.add(playerB);
+        if (playerC != null) players.add(playerC);
+        if (playerD != null) players.add(playerD);
+        return players;
+    }
+
     public Course getPlayersCourse() {
         return playersCourse;
     }
