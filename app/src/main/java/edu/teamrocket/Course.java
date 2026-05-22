@@ -1,7 +1,5 @@
 package edu.teamrocket;
-import java.util.Arrays;
 import java.util.Map;
-import java.util.Optional;
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
 

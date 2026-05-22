@@ -18,6 +18,9 @@ public class Hole {
         return par;
     }
 
-
+    @Override
+    public String toString() {
+        return "Hole " + this.number + ": Par " + this.par;
+    }
     
 }
